@@ -1,9 +1,10 @@
 import streamlit as st
 import numpy as np
+from os import path
 from joblib import load
 
 # Load the saved model
-model = load('model/best_rf_model.joblib')
+model = load(open(path.join("model","best_rf_model.joblib"),"rb"))
 
 # Title and description
 st.title("Football Player Performance Predictor")
